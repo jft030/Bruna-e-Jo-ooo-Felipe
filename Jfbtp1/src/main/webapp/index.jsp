@@ -27,8 +27,9 @@
  </head>
 
  <body>
-  <h1> Formulário HTML js</h1> 
-  <h2> Preencha o formulário abaixo</h2><br />
+     <%@include file="WEB-INF/jspf/menuzao.jspf" %>
+  <h2> Formulário HTML js</h2> 
+  <h3> Preencha o formulário abaixo</h3><br />
 
 <form oninput="x.value=parseInt(a.value)" action="Meu11Servlet" method="post">
 
@@ -37,7 +38,7 @@
  <legend>Dados Pessoais</legend>
   <div>
     <input type="hidden" name="oculto" value="emJs">
-    <label for="nome">Nome: </label>
+    <label for="nome" >Nome: </label>
     <input type="text" name="nome" placeholder="Fulano..." title="Digite o seu nome">
     <label for="sobrenome">Sobrenome: </label>
     <input type="text" name="sobrenome">
