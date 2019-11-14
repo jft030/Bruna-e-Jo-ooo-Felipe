@@ -6,12 +6,17 @@ package br.edu.iff.jfbtp1.servlets;
  * and open the template in the editor.
  */
 
+import br.edu.iff.jfbtp1.entidades.Usuario;
+import br.edu.iff.jfbtp1.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -34,6 +39,22 @@ public class Meu11Servlet extends HttpServlet {
         String sobrenome = request.getParameter("sobrenome");
         String nomeCompleto = nome+" "+sobrenome;
         System.out.println("Nome completo: "+nomeCompleto);
+        String senha = request.getParameter("senha");
+        
+        Usuario user = new Usuario();
+        user.setNome(nomeCompleto);
+        user.setSenha(senha);
+        
+        Double aleatorio = Math.random();
+        BigDecimal id= new BigDecimal(aleatorio);
+        user.setIdUsuario(id);
+        
+        Session sessaoBD = HibernateUtil.getSession();
+        Transaction tr = sessaoBD.getTransaction();
+        sessaoBD.save(user);
+        tr.commit();
+        sessaoBD.close();
+        
         response.sendRedirect("novoteste.jsp");
         
         
