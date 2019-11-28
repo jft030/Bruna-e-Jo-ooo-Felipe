@@ -10,6 +10,7 @@ import br.edu.iff.jfbtp1.entidades.Usuario;
 import br.edu.iff.jfbtp1.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Integer.parseInt;
 import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,8 +45,9 @@ public class Meu11Servlet extends HttpServlet {
         Usuario user = new Usuario();
         user.setNome(nomeCompleto);
         user.setSenha(senha);
+     
         
-        Double aleatorio = Math.random();
+       Double aleatorio = Math.random();
         BigDecimal id= new BigDecimal(aleatorio);
         user.setIdUsuario(id);
         

@@ -102,7 +102,8 @@
         </select>
     </div--%>
   </fieldset>
-  <%--fieldset>
+  
+  <fieldset>
     <legend>Dados de documentos</legend>
     <div>
     <label for="rg">RG: </label>
@@ -116,6 +117,7 @@
 
 <br />
 <!-- ENDEREÇO -->
+<!-- 
 <fieldset>
  <legend>Dados de Endereço</legend>
  <div>
@@ -169,7 +171,7 @@
     <label for="cep">CEP: </label>
     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
    </div>
-</fieldset--%>
+
 <br />
 
 <!-- DADOS DE LOGIN -->
