@@ -1,4 +1,6 @@
-﻿﻿ALTER TABLE public.usuario
-  ADD COLUMN doc_rg character varying(20);
-ALTER TABLE public.usuario
-  ADD COLUMN doc_cpf numeric(11,0);
+ALTER TABLE Public.usuario
+    ADD COLUMN end_munucipio character varyng (30);
+_ALTER TABLE Public.usuario
+ADD COLUMN end_cep numeric (6,0);
+
+    
